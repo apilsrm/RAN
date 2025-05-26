@@ -86,6 +86,12 @@ The following pins are used to interface with the motor driver and encoder:
    - This toggles the motor speed every 30ms to reduce oscillations near the target.
 
 ## Code Structure
+   ### Flow 
+
+    Setup --> loop --> updatemotor --> movemotor
+           |               |
+           --> readsensor -|
+
 
 ### Pin Definitions
 
