@@ -1,5 +1,6 @@
 # Motor Position Control System
 
+  
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
@@ -126,6 +127,13 @@ The code follows a structured approach to control the motor's position with safe
      - Applies PID control to fine-tune PWM.
      - Checks the lower limit switch to prevent over-travel.
 
+     ![][image1]
+     ![][image2]
+
+
+
+
+
 5. **Limit Handling (`handleLimitHit`)**:
    - Stops the motor if a limit switch is triggered.
    - Moves slightly in the opposite direction (500ms at low/medium speed).
@@ -168,6 +176,7 @@ void readSensor() {
   lastState = currentState;
 }
 ```
+![][image2]
 
 ### Sensor Logic Details
 - **Interrupt Trigger**: The function is called on `CHANGE` (rising or falling edge) of `SENSOR_PIN`.
@@ -254,3 +263,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contributing
 Contributions are welcome! Please submit a pull request or open an issue for bug reports or feature suggestions.
+
+
+[image1]:/DC_Motor_with_Optical_Encoder//VSR_testing(Code)/Screenshot%20of%20output.png
+[image2]:/DC_Motor_with_Optical_Encoder//VSR_testing(Code)/Screenshot%20of%20outputs.png
